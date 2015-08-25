@@ -10,4 +10,4 @@ before_script:
   - php app/console assets:install web --symlink
   - php app/console assetic:dump
 script:
-  - phpunit --debug -vc app/ --coverage-clover build/logs/clover.xml
+  - phpunit -c app/ --coverage-clover build/logs/clover.xml
