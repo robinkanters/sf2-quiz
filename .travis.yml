@@ -7,7 +7,7 @@ php:
   - nightly
 before_script:
   - composer install -n --no-interaction
-  - php bin/console assets:install web --symlink
-  - php bin/console assetic:dump
+  - php app/console assets:install web --symlink
+  - php app/console assetic:dump
 script:
   - phpunit --debug -vc app/ --coverage-clover build/logs/clover.xml
