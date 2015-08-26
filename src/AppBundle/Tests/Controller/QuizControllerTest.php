@@ -12,6 +12,13 @@ class QuizControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/quiz/list');
 
+        $block = $crawler->filter('div.text-exception > h1');
+        if ($block->count()) {
+            $error = $block->text();
+        }
+
+        $this->assertEquals("dummy", $error);
+
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
