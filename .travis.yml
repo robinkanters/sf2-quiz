@@ -15,4 +15,4 @@ before_script:
   - php app/console assetic:dump
 script:
   - phpunit -c app/ --coverage-clover build/logs/clover.xml
-  - if [ "$CODECLIMATE" = "1" ]; then ./vendor/codeclimate/php-test-reporter/composer/bin/test-reporter; fi
+  - if [ "$CODECLIMATE" = "1" ]; then ./vendor/codeclimate/php-test-reporter/composer/bin/test-reporter; else echo "Not submitting to codeclimate this time"; fi
