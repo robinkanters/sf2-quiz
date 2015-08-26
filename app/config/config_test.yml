@@ -17,6 +17,7 @@ swiftmailer:
 
 doctrine:
     dbal:
+        driver:   pdo_pgsql
         host:     localhost
         dbname:   travis_ci_test
         user:     postgres
