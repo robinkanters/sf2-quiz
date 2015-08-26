@@ -28,4 +28,13 @@ class QuizControllerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($quiz->getName(), $quizName);
     }
 
+    public function testGetId()
+    {
+        $quiz = new Quiz();
+        $quizId = 1;
+
+        TestUtility::setProperty($quiz, "id", $quizId);
+
+        $this->assertEquals($quiz->getId(), $quizId);
+    }
 }
