@@ -12,10 +12,6 @@ class QuizControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/quiz/list');
 
-        $block = $crawler->text();
-
-        $this->assertEquals("dummy", $block);
-
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
