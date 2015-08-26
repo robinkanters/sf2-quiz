@@ -6,8 +6,9 @@ php:
   - hhvm
   - nightly
 matrix:
-  - php: 5.4
-    env: CODECLIMATE=1
+  include:
+    - php: 5.4
+      env: CODECLIMATE=1
 before_script:
   - composer install -n --no-interaction
   - php app/console assets:install web --symlink
