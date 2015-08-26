@@ -14,9 +14,13 @@ class QuizController extends Controller
      */
     public function listAction()
     {
-        return array(
-            // ...
-        );
+        $quizzes = $this->getDoctrine()
+            ->getRepository('AppBundle:Quiz')
+            ->findAll();
+
+        return $this->render("@App/Quiz/list.html.twig", array(
+            "quizzes" => $quizzes
+        ));
     }
 
     /**
