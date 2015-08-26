@@ -10,7 +10,7 @@ class QuizControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/list');
+        $crawler = $client->request('GET', '/quiz/list');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }

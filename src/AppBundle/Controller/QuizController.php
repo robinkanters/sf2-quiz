@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class QuizController extends Controller
 {
     /**
-     * @Route("/list")
+     * @Route("/quiz/list")
      * @Template()
      */
     public function listAction()
