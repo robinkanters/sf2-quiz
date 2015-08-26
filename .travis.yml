@@ -15,7 +15,6 @@ before_script:
   - php app/console assets:install web --symlink
   - php app/console assetic:dump
 script:
-  - app/console doctrine:database:create
   - app/console doctrine:schema:update --force
   - phpunit -c app/ --coverage-clover build/logs/clover.xml
   - if [ "$CODECLIMATE" = "1" ]; then ./vendor/codeclimate/php-test-reporter/composer/bin/test-reporter; else echo "Not submitting to codeclimate this time"; fi
