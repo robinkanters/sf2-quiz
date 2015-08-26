@@ -2,3 +2,6 @@ languages:
   PHP: true
 exclude_paths:
 - "app/SymfonyRequirements.php"
+- "web/app_dev.php"
+- "app/check.php"
+- "web/config.php"
