@@ -22,19 +22,21 @@ class QuizTest extends \PHPUnit_Framework_TestCase
     {
         $quiz = new Quiz();
         $quizName = "some name";
-
         TestUtility::setProperty($quiz, "name", $quizName);
 
-        $this->assertEquals($quiz->getName(), $quizName);
+        $getQuizName = $quiz->getName();
+
+        $this->assertEquals($getQuizName, $quizName);
     }
 
     public function testGetId()
     {
         $quiz = new Quiz();
         $quizId = 1;
-
         TestUtility::setProperty($quiz, "id", $quizId);
 
-        $this->assertEquals($quiz->getId(), $quizId);
+        $quizGetId = $quiz->getId();
+
+        $this->assertEquals($quizGetId, $quizId);
     }
 }
