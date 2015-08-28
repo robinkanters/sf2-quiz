@@ -5,7 +5,7 @@ namespace AppBundle\Tests\Entity;
 use AppBundle\Entity\Quiz;
 use AppBundle\Tests\TestUtility;
 
-class QuizControllerTest extends \PHPUnit_Framework_TestCase
+class QuizTest extends \PHPUnit_Framework_TestCase
 {
     public function testSetName()
     {
